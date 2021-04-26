@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+    apache:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: apache
+        ports:
+            - 8000:80
+        volumes: 
+            - ./src:/var/www/html/        
+        user: www-data
